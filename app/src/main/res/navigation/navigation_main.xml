@@ -29,5 +29,30 @@
         android:id="@+id/fragment_home"
         android:name="ir.nima.navigationcomponent.fragment_home"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_fragment_home_to_fragment_profile"
+            app:destination="@id/fragment_profile" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragmentHome"
+            app:destination="@id/fragmentHome" />
+        <action
+            android:id="@+id/action_fragment_home_to_fragmentRegister"
+            app:destination="@id/fragmentRegister" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_profile"
+        android:name="ir.nima.navigationcomponent.Fragment_profile"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="ir.nima.navigationcomponent.FragmentHomeButten"
+        android:label="fragment_home2"
+        tools:layout="@layout/fragment_home2" />
+    <fragment
+        android:id="@+id/fragmentRegister"
+        android:name="ir.nima.navigationcomponent.FragmentRegister"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" />
 </navigation>

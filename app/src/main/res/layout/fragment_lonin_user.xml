@@ -75,14 +75,14 @@
         app:layout_constraintTop_toBottomOf="@id/textView3">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:drawableEnd="dar"
+
             android:inputType="textPassword"
             android:id="@+id/textInputEditText2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/shape_login"
             android:hint="Enter your password"
-            tools:ignore="DuplicateIds,SpeakableTextPresentCheck" />
+             />
 
 
     </com.google.android.material.textfield.TextInputLayout>
@@ -123,7 +123,7 @@
 
         app:backgroundTint="@color/blue"
         android:background="@drawable/shape_login"
-        android:id="@+id/button"
+        android:id="@+id/btn_login"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
