@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation_main"
-    app:startDestination="@id/fragment_profile">
+    app:startDestination="@id/login">
 
     <fragment
         android:id="@+id/login"
@@ -44,7 +44,11 @@
         android:id="@+id/fragment_profile"
         android:name="ir.nima.navigationcomponent.Fragment_profile"
         android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_fragment_profile_to_fragmentRegister"
+            app:destination="@id/fragmentRegister" />
+    </fragment>
     <fragment
         android:id="@+id/fragmentHome"
         android:name="ir.nima.navigationcomponent.FragmentHomeButten"
