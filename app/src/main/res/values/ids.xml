@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="btn_login" type="id" />
+    <item name="fab_main" type="id" />
+
 </resources>

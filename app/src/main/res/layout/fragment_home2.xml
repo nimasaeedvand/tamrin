@@ -3,12 +3,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".FragmentHomeButten">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="fragment home " />
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/rrcycler_main"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       tools:listitem="@layout/item_recycler" />
+
+   <com.google.android.material.floatingactionbutton.FloatingActionButton
+       android:id="@+id/fab_main"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_gravity="end|bottom"
+       android:layout_margin="20dp"
+       android:src="@drawable/ic_add"
+       app:tint="#612E2E"
+       tools:ignore="SpeakableTextPresentCheck" />
 
 </FrameLayout>

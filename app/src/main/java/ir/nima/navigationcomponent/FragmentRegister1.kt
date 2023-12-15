@@ -10,16 +10,17 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import ir.nima.navigationcomponent.databinding.FragmentProfileBinding
+import ir.nima.navigationcomponent.databinding.FragmentRegister1Binding
 import ir.nima.navigationcomponent.databinding.FragmentRegisterBinding
 
 
-class FragmentRegister : Fragment() {
+class FragmentRegister1 : Fragment() {
 
-    lateinit var binding: FragmentRegisterBinding
+    lateinit var binding: FragmentRegister1Binding
     lateinit var sharedPreferences : SharedPreferences
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         // Inflate the layout for this fragment
-        binding = FragmentRegisterBinding.inflate(layoutInflater)
+        binding = FragmentRegister1Binding.inflate(layoutInflater)
 
         return binding.root
 

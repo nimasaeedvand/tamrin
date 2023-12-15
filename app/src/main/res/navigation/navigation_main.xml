@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_loninUserFragment_to_fragment_home"
             app:destination="@id/fragment_home" />
+        <action
+            android:id="@+id/action_loninUserFragment_to_fragmentRegister1"
+            app:destination="@id/fragmentRegister1" />
     </fragment>
     <fragment
         android:id="@+id/fragment_home"
@@ -59,4 +62,8 @@
         android:name="ir.nima.navigationcomponent.FragmentRegister"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/fragmentRegister1"
+        android:name="ir.nima.navigationcomponent.FragmentRegister1"
+        android:label="FragmentRegister1" />
 </navigation>

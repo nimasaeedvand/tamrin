@@ -1,5 +1,6 @@
 package ir.nima.navigationcomponent
 
+import android.annotation.SuppressLint
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
@@ -25,6 +26,7 @@ class Fragment_profile : Fragment() {
 
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         sharedPreferences = requireActivity().getSharedPreferences("data" , Context.MODE_PRIVATE)
 
