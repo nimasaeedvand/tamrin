@@ -1,16 +1,19 @@
 package ir.nima.navigationcomponent
 
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import ir.nima.navigationcomponent.databinding.ItemRecyclerBinding
+import kotlin.coroutines.coroutineContext
 
-class Adaptor ( val data: ArrayList<data> ) : RecyclerView.Adapter<Adaptor.viewHolder>() {
+class Adaptor ( val data: ArrayList<data> , val evant: evant) : RecyclerView.Adapter<Adaptor.viewHolder>() {
 
-    inner class viewHolder(itemView: View):RecyclerView.ViewHolder(itemView){
+    inner class viewHolder( itemView: View):RecyclerView.ViewHolder(itemView){
         val txt_task = itemView.findViewById<CheckBox>(R.id.txtTask)
         val txt_time = itemView.findViewById<TextView>(R.id.txtTime)
 
@@ -21,7 +24,28 @@ class Adaptor ( val data: ArrayList<data> ) : RecyclerView.Adapter<Adaptor.viewH
             txt_time.text = data[position].time
 
 
+            itemView.setOnClickListener{
+
+                evant.onClick(data[adapterPosition] , adapterPosition)
+
+
+
+            }
+
+            itemView.setOnLongClickListener{
+
+
+                evant.longclick(data[adapterPosition] , adapterPosition)
+
+
+                true
+            }
+
+
+
         }
+
+
 
 
     }
@@ -48,6 +72,28 @@ class Adaptor ( val data: ArrayList<data> ) : RecyclerView.Adapter<Adaptor.viewH
 
 
     }
+
+    fun updateitem(data : data , position: Int){
+
+        this.data.set(position,data)
+        notifyItemChanged(position)
+
+
+    }
+
+    fun deletItem(data: data , position: Int){
+        this.data.remove(data)
+        notifyItemRemoved(position)
+
+    }
+
+
+
+}
+interface evant {
+
+    fun longclick (data: data , position: Int)
+    fun onClick(data: data,position: Int)
 
 
 }
